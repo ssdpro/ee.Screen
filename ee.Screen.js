@@ -36,7 +36,7 @@ function sleep(ms) { ms += new Date().getTime(); while (new Date() < ms) {} }
                        {  var lineUrlFlat = lineUrl.replace(/[^a-z0-9.]+/gi,"_")
                           lineTit = lineTit.replace('~flatUrl~',lineUrlFlat)
                        }
-                       var getPath = lineTit.substring(0, lineTit.lastIndexOf("\\"))
+                       var getPath = lineTit.substring(0, lineTit.lastIndexOf("/"))
                        if (!fs.existsSync(getPath)) { fs.mkdirSync(getPath) }
                        var subLineRes = lineRes.split('\*')
                        var shotWidth  = Number(subLineRes[0])
