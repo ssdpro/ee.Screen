@@ -7,7 +7,7 @@ var fs = require('fs')
 var os = require('os')
 var delayBeforeScreening = 3000
 var whereUrls = 'list.txt' ; if (process.argv[2]) { whereUrls = process.argv[2] }
-var puppeteer = require(os.homedir() + '\\node_modules\\puppeteer')
+var puppeteer = require('puppeteer')
 var list = fs.readFileSync(whereUrls, "utf8", (err) => { if (err) throw err }).toString().split("\n")
 function sleep(ms) { ms += new Date().getTime(); while (new Date() < ms) {} }
 
